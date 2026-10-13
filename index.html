@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analyze job requirements, compare your skills, and discover what to learn next.">
+    <title>Job Description Skill Gap Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Job Description Skill Gap Analyzer</h1>
+        <p>Discover your skill gaps and plan your learning journey.</p>
+
+        <label for="jobDescription">Job Description</label>
+        <textarea
+            id="jobDescription"
+            placeholder="Paste the job description here..."
+            rows="6"
+        ></textarea>
+
+        <label for="mySkills">Your Current Skills</label>
+        <textarea
+            id="mySkills"
+            placeholder="Example: HTML, CSS, JavaScript, Java"
+            rows="4"
+        ></textarea>
+
+        <button type="button" onclick="analyzeSkills()">
+            Analyze Skills
+        </button>
+
+        <div id="results" hidden>
+
+            <h2>Analysis Results</h2>
+
+            <div class="match-summary">
+                <h3>Skill Match</h3>
+                <span id="percentage">0%</span>
+            </div>
+
+            <h3>Matched Skills</h3>
+            <div id="matchedSkills">
+                <!-- Matched skills appear here -->
+            </div>
+
+            <h3>Missing Skills</h3>
+            <div id="missingSkills">
+                <!-- Missing skills appear here -->
+            </div>
+
+            <h3>📚 Your Learning Roadmap</h3>
+            <div id="learningRoadmap">
+<button type="button" onclick="downloadReport()">
+    Download Analysis Report
+</button>
+                <!-- Learning recommendations appear here -->
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Job Description Skill Gap Analyzer | Built with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
